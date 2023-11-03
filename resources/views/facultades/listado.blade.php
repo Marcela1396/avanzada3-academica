@@ -8,6 +8,10 @@
 
 @section('content')
 
+    <div class="container">
+        <a href="{{route('form_registro_fac')}}" class="btn btn-primary">Adicionar</a>
+    </div>
+
     <table class="table">
         <thead>
             <tr>
@@ -18,20 +22,25 @@
             </tr>
         </thead>
         <tbody>
+            @php
+                $i = 1;
+            @endphp
+            @foreach($faculty as $f)
             <tr>
-            <th scope="row">1</th>
-                <td>123</td>
-                <td>Ingeniería</td>
+                <th scope="row">{{$i}}</th>
+                <td>{{ $f->codfacultad }}</td>
+                <td>{{ $f->nomfacultad }}</td>
                 <td>
                     <button type="button" class="btn btn-success">Editar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>        
-                    </td>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+                @php
+                    $i = $i + 1;
+                @endphp
             </tr>
-
+            @endforeach
         </tbody>
     </table>
-    
-
 
 @stop
 
