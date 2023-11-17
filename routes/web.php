@@ -37,6 +37,15 @@ Route::get('/facultades/registrar', [Facultades::class, 'form_registro']
 Route::post('/facultades/registrar', [Facultades::class, 'registrar']
 )->middleware(['auth', 'verified'])->name('registrar_fac');
 
+Route::get('/facultades/editar/{id}', [Facultades::class, 'form_edicion']
+)->middleware(['auth', 'verified'])->name('editar_fac');
+
+Route::post('/facultades/editar/{id}', [Facultades::class, 'editar']
+)->middleware(['auth', 'verified'])->name('editar_facultad');
+
+Route::get('/facultades/eliminar/{id}', [Facultades::class, 'eliminar']
+)->middleware(['auth', 'verified'])->name('eliminar_fac');
+
 // Rutas Programas
 Route::get('/programas/listado', [Programas::class, 'index']
 )->middleware(['auth', 'verified'])->name('listado_programas');

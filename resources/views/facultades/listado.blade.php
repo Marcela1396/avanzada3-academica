@@ -31,8 +31,8 @@
                 <td>{{ $f->codfacultad }}</td>
                 <td>{{ $f->nomfacultad }}</td>
                 <td>
-                    <button type="button" class="btn btn-success">Editar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <a href="{{route('editar_fac',$f->codfacultad)}}" class="btn btn-success">Editar</a>
+                    <a href="{{route('eliminar_fac', $f->codfacultad)}}" class="btn btn-danger">Eliminar</a>
                 </td>
                 @php
                     $i = $i + 1;
