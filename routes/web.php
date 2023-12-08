@@ -50,6 +50,19 @@ Route::get('/facultades/eliminar/{id}', [Facultades::class, 'eliminar']
 Route::get('/programas/listado', [Programas::class, 'index']
 )->middleware(['auth', 'verified'])->name('listado_programas');
 
+Route::get('/programas/registrar', [Programas::class, 'form_registro']
+)->middleware(['auth', 'verified'])->name('form_registro_prg');
+
+Route::post('/programas/registrar', [Programas::class, 'registrar']
+)->middleware(['auth', 'verified'])->name('registrar_prg');
+
+Route::post('/programas/editar/{id}', [Programas::class, 'editar']
+)->middleware(['auth', 'verified'])->name('editar_programa');
+
+Route::get('/programas/eliminar/{id}', [Programas::class, 'eliminar']
+)->middleware(['auth', 'verified'])->name('eliminar_programa');
+
+
 // Rutas Estudiantes
 Route::get('/estudiantes/listado', [Estudiantes::class, 'index']
 )->middleware(['auth', 'verified'])->name('listado_estudiantes');

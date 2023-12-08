@@ -17,27 +17,27 @@ class ProgramasSeeder extends Seeder
     {
         $programas = [
             [
-                'codprograma' => '03',
+                'codprograma' => '30',
                 'nomprograma' => 'Ingeniería de Sistemas',
                 'facultad' => '30',
             ],
             [
-                'codprograma' => '04',
+                'codprograma' => '40',
                 'nomprograma' => 'Derecho Civil',
                 'facultad' => '40',
             ],
             [
-                'codprograma' => '05',
+                'codprograma' => '50',
                 'nomprograma' => 'Ciencias Sociales',
                 'facultad' => '50',
             ],
             [
-                'codprograma' => '01',
+                'codprograma' => '10',
                 'nomprograma' => 'Diseño gráfico',
                 'facultad' => '10',
             ],
             [
-                'codprograma' => '06',
+                'codprograma' => '11',
                 'nomprograma' => 'Contaduría Pública',
                 'facultad' => '20',
             ],

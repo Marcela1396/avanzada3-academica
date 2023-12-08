@@ -311,35 +311,35 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        
+
         ['header' => 'Sistema Academico'],
         [
             'text' => 'Facultades',
             'url'  => '/facultades/listado',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-home',
         ],
         [
             'text' => 'Programas',
             'url'  => '/programas/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-book',
         ],
         [
             'text' => 'Docentes',
             'url'  => '/docentes/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Estudiantes',
             'url'  => '/estudiantes/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-users',
         ],
 
         [
             'text' => 'Materias',
             'url'  => '/materias/listado',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-pen',
         ],
-        
+
         /*
         [
             'text'    => 'multilevel',

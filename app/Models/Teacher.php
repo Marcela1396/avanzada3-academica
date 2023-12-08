@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Faculty extends Model
+class Teacher extends Model
 {
-    protected $table = 'facultad';
-    protected $primaryKey = 'codfacultad';
+    protected $table = 'docente';
+    protected $primaryKey = 'codprofesor';
     public $timestamps = 'true';
 
     public function program(){
-        return $this->hasMany(Program::class, 'codprograma');
+        return $this->belongsTo(Program::class, 'programa', 'codprograma');
     }
 
 }

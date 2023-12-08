@@ -8,8 +8,9 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container" align="right">
         <a href="{{route('form_registro_fac')}}" class="btn btn-primary">Adicionar</a>
+        <br><br>
     </div>
 
     <table class="table">
