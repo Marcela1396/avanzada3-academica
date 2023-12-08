@@ -15,6 +15,8 @@ class Program extends Model
         return $this->belongsTo(Faculty::class, 'facultad', 'codfacultad');
     }
 
-
+    public function teachers(){
+        return $this->hasMany(Teacher::class, 'codprofesor');
+    }
 
 }

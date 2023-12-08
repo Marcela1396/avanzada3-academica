@@ -20,14 +20,14 @@ class DocenteSeeder extends Seeder
                'codprofesor' => '10',
                'nomprofesor' => 'Jesús Insuasti',
                'cateprofesor' => 'Tiempo Completo',
-               'fotoprofesor' => 'jesus.jpg',
-               'programa' => '30'
+               'fotoprofesor' => '1.jpg',
+               'programa' => '10'
             ],
             [
                 'codprofesor' => '11',
                 'nomprofesor' => 'Ricardo Timarán',
                 'cateprofesor' => 'Tiempo Completo',
-                'fotoprofesor' => 'ricardo.jpg',
+                'fotoprofesor' => '2.jpg',
                 'programa' => '40'
             ]
         ];

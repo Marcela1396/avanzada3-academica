@@ -35,8 +35,8 @@
                 <td>{{$p->nomprograma}}</td>
                 <td>{{$p->faculties->nomfacultad}}</td>
                 <td>
-                    <button type="button" class="btn btn-success">Editar</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <a class="btn btn-success" href="{{route('editar_prg', $p->codprograma)}}">Editar</a>
+                    <a class="btn btn-danger" href="{{route('eliminar_programa', $p->codprograma)}}">Eliminar</a>
                 </td>
                 @php
                 $i= $i+ 1;

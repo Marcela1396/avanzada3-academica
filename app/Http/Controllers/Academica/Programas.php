@@ -30,9 +30,33 @@ class Programas extends Controller
         return view('programas.form_registro', compact('query'));
     }
 
-    public function registrar(){
-
+    public function registrar(Request $request){
+        $programa = new Program();
+        $programa->codprograma = $request->input('cod_programa');
+        $programa->nomprograma = $request->input('nom_programa');
+        $programa->facultad = $request->input('facultad');
+        $programa->save();
+        return redirect()->route('listado_programas');
     }
 
+    public function form_edicion($id){
+        $programa = Program::findorFail($id);
+        $facultades = Faculty::all();
+        return view('programas.form_edicion', compact('programa', 'facultades'));
+    }
+
+    public function editar(Request $request, $id){
+        $programa = Program::findorFail($id);
+        $programa->nomprograma = $request->input('nom_programa');
+        $programa->facultad = $request->input('facultad');
+        $programa->save();
+        return redirect()->route('listado_programas');
+    }
+
+    public function eliminar($id){
+        $programa = Program::findorFail($id);
+        $programa->delete();
+        return redirect()->route('listado_programas');
+    }
 
 }

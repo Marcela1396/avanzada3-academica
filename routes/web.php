@@ -56,6 +56,9 @@ Route::get('/programas/registrar', [Programas::class, 'form_registro']
 Route::post('/programas/registrar', [Programas::class, 'registrar']
 )->middleware(['auth', 'verified'])->name('registrar_prg');
 
+Route::get('/programas/editar/{id}', [Programas::class, 'form_edicion']
+)->middleware(['auth', 'verified'])->name('editar_prg');
+
 Route::post('/programas/editar/{id}', [Programas::class, 'editar']
 )->middleware(['auth', 'verified'])->name('editar_programa');
 
