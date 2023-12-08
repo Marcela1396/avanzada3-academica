@@ -11,11 +11,10 @@ class Program extends Model
     protected $primaryKey = 'codprograma';
     public $timestamps = 'true';
 
-    public function faculty(){
+    public function faculties(){
         return $this->belongsTo(Faculty::class, 'facultad', 'codfacultad');
     }
 
-    public function teacher(){
-        return $this->hasMany(Teacher::class, 'codprofesor');
-    }
+
+
 }

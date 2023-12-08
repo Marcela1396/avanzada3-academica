@@ -11,8 +11,9 @@ class Faculty extends Model
     protected $primaryKey = 'codfacultad';
     public $timestamps = 'true';
 
-    public function program(){
+    public function programs(){
         return $this->hasMany(Program::class, 'codprograma');
+
     }
 
 }

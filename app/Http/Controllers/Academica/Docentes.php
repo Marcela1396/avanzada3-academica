@@ -10,7 +10,7 @@ class Docentes extends Controller
 {
 
     public function index(){
-        $profesores = Teacher::all();
-        return view('docentes.listado', ['profes'=> $profesores]);
+
+        return view('docentes.listado');
     }
 }
